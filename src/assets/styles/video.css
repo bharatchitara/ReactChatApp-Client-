@@ -1,0 +1,18 @@
+
+.videoplayerstyle{
+    border: 1px solid red;
+    max-width: 100%;
+    display: block;
+}
+
+#showchatbutton{
+    height: 10%;
+    width: 8%;
+    border: 1px solid #0000ff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    
+}
+
+
