@@ -18,6 +18,7 @@ function App() {
 
   const [initialstyle , afterstyle] = useState('videoplayerstyle');
   const [chatshow,chathide] = useState('chat');
+  const [userName, setUserName] = useState("");
 
 
   function handleclick(){
@@ -36,14 +37,20 @@ function App() {
   return (
 
     <BrowserRouter>
-    {/* <input type="text" 
+    <div className="user_inputBox">
+    <label htmlFor="username">Enter Username: </label>
+    <input type="text" 
         minLength={6}
         placeholder= "Enter the username" 
         name="username" 
         id='username'
+        value={userName}
         className='username__input' 
-        onChange={ }
-        /> */}
+        onChange={ e => {setUserName(e.target.value); }}
+        
+        />
+        <button className='home__cta' onClick={ ()=> {localStorage.clear();localStorage.setItem("userName", userName)}}>Save</button>
+        </div>
         <div className="app1">
         
           <Videoplayer dataCheck = {initialstyle}/>
