@@ -54,7 +54,7 @@ function App() {
         <div className="app1">
         
           <Videoplayer dataCheck = {initialstyle}/>
-          <button id='showchatbutton' onClick={handleclick}> show chat</button>
+          <button id='showchatbutton' onClick={handleclick}> Chat</button>
 
           <Routes>
             <Route path="/" element={<ChatPage socket={socket} hidechatbox = {chatshow} />}></Route>
