@@ -5,11 +5,6 @@ import '../assets/styles/video.css';
 import ChatPage from './ChatPage';
 
 
-// export class Videoplayer extends Component{
-
-
-
-
 function Videoplayer(props){
 
     console.log(props.dataCheck)

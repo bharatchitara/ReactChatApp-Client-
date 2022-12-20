@@ -19,9 +19,16 @@ function App() {
   const [initialstyle , afterstyle] = useState('videoplayerstyle');
   const [chatshow,chathide] = useState('chat');
 
+
   function handleclick(){
-    afterstyle('afterchatclick');
-    chathide('chat_hide');
+    if(initialstyle == 'videoplayerstyle'){
+      afterstyle('afterchatclick');
+      chathide('chat_hide');
+    }else{
+      afterstyle('videoplayerstyle');
+      chathide('chat');
+    }
+
   }
 
 
@@ -29,7 +36,16 @@ function App() {
   return (
 
     <BrowserRouter>
+    {/* <input type="text" 
+        minLength={6}
+        placeholder= "Enter the username" 
+        name="username" 
+        id='username'
+        className='username__input' 
+        onChange={ }
+        /> */}
         <div className="app1">
+        
           <Videoplayer dataCheck = {initialstyle}/>
           <button id='showchatbutton' onClick={handleclick}> show chat</button>
 

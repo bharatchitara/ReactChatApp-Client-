@@ -5,10 +5,6 @@ import ChatFooter from './ChatFooter'
 import Videoplayer from './video'
 
 
-
-
-
-
 const ChatPage = ({socket,hidechatbox }) => { 
   const [messages, setMessages] = useState([])
   const [typingStatus, setTypingStatus] = useState("")
